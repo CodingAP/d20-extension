@@ -14,6 +14,19 @@
         "fontSettings",
         "input"
     ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "res/scream.mp3",
+                "res/creepyblended.png",
+                "res/fireball.png",
+                "res/dwagon.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
     "action": {
         "default_popup": "html/main_page.html"
     },
