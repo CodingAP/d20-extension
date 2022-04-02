@@ -407,8 +407,16 @@ let runRandom = () => {
                 });
                 break;
             case 6:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees dont care what humans think is impossible. Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! Lets shake it up a little. Barry! Breakfast is ready! Coming! Hang on a second. Hello? - Barry? - Adam? - Can you believe this is happening?', { 'rate': 5.0 });
+                });
+                break;
             case 7:
             case 8:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('That was legitness')
+                });
+                break;
             case 9:
             case 10:
                 chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
@@ -422,15 +430,34 @@ let runRandom = () => {
                 });
                 break;
             case 11:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('Maidenless?')
+                });
+                    break;
             case 12:
             case 13:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('Hi, thanks for checking in. I am still a piece of garbage')
+                });
+                break;
             case 14:
             case 15:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('And oh my god they were roommates')
+                });
                 break;
             case 16:
             case 17:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('Hurricane Katrina, more like hurricane tor till a')
+                });
+                break;
             case 18:
             case 19:
+                chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
+                    chrome.tts.speak('Road work ahead, yeah, I sure hope it does')
+                });
+                break;
             case 20:
                 chrome.tabs.query({ active: true, currentWindow: true }).then(response => {
                     let tab = response[0];
@@ -460,7 +487,7 @@ let rollDice = async sides => {
         });
     });
 
-    await sleep(4000);
+    await sleep(500);
 
     return Math.floor(Math.random() * sides + 1);
 }

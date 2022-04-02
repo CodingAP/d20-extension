@@ -11,7 +11,8 @@
         "activeTab",
         "scripting",
         "tabs",
-        "fontSettings"
+        "fontSettings",
+        "tts"
     ],
     "web_accessible_resources": [
         {
