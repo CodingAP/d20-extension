@@ -10,9 +10,14 @@
         "storage",
         "activeTab",
         "scripting",
-        "tabs"
+        "tabs",
+        "fontSettings",
+        "input"
     ],
     "action": {
         "default_popup": "html/main_page.html"
-    }
+    },
+    "host_permissions": [
+        "*://*/*"
+    ]
 }
