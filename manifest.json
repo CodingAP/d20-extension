@@ -11,8 +11,7 @@
         "activeTab",
         "scripting",
         "tabs",
-        "fontSettings",
-        "input"
+        "fontSettings"
     ],
     "web_accessible_resources": [
         {
@@ -20,7 +19,16 @@
                 "res/scream.mp3",
                 "res/creepyblended.png",
                 "res/fireball.png",
-                "res/dwagon.png"
+                "res/dwagon.png",
+                "res/d20.gif",
+                "res/devito1.png",
+                "res/devito2.png",
+                "res/devito3.png",
+                "res/devito4.png",
+                "res/devito5.png",
+                "res/devito6.png",
+                "res/devito7.png"
+
             ],
             "matches": [
                 "<all_urls>"

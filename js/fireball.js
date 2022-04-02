@@ -1,29 +1,28 @@
-let dragonURL = chrome.runtime.getURL('/res/dwagon.png');
-let fireball = chrome.runtime.getURL('/res/fireball.png');
+dragonURL = chrome.runtime.getURL('/res/dwagon.png');
+fireballURL = chrome.runtime.getURL('/res/fireball.png');
 
 let dragonImg = new Image();
-dragonImg.onload = () => {
-    let x = canvas.width;
-    setInterval(() => {
-        x -= 5;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(dragonImg, canvas.width - dragonImg.width, 0);
-        context.drawImage(fireballImg, x - 300, 100);
-    }, 1000 / 60);
-}
 dragonImg.src = dragonURL;
 
 let fireballImg = new Image();
 fireballImg.onload = () => {
     let x = canvas.width;
+    let x2 = 0;
     setInterval(() => {
-        x--;
+        x -= 5;
         context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(fireballImg, x, 200, 300, 100);
         context.drawImage(dragonImg, canvas.width - dragonImg.width, 0);
-        context.drawImage(fireballImg, x, 100);
+
+        x2 += 5;
+        context.save();
+        context.scale(-1, 1);
+        context.drawImage(fireballImg, -x2, 500, 300, 100);
+        context.drawImage(dragonImg, -dragonImg.width, 400);
+        context.restore();
     }, 1000 / 60);
 }
-fireball.src = fireball;
+fireballImg.src = fireballURL;
 
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
